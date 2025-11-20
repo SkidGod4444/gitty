@@ -1,8 +1,7 @@
 "use client";
 
-import * as React from "react";
 import * as Popover from "@radix-ui/react-popover";
-import { Github, MenuIcon, Star } from "lucide-react";
+import { MenuIcon, Star } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -16,7 +15,6 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import ThemeSwitcher from "../theme.switcher";
 
 export default function SiteNavbar() {
   return (
