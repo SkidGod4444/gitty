@@ -13,9 +13,19 @@ const fontLora = localFont({
       style: "bold",
     },
     {
-      path: "../fonts/Lora-BoldItalic.ttf",
+      path: "../fonts/Lora-SemiBold.ttf",
+      weight: "400",
+      style: "semibold",
+    },
+    {
+      path: "../fonts/Lora-Italic.ttf",
       weight: "400",
       style: "italic",
+    },
+    {
+      path: "../fonts/Lora-SemiBoldItalic.ttf",
+      weight: "400",
+      style: "semibold-italic",
     },
     {
       path: "../fonts/Lora-Regular.ttf",

@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { ArrowBigRight } from "lucide-react";
 import Image from "next/image";
 
 export default function Home() {
@@ -25,6 +26,45 @@ export default function Home() {
           </Button>
           <Button size={"sm"}>
             Get Started
+          </Button>
+        </div>
+      </section>
+      <section
+        id="bento-cards"
+        className="flex flex-col md:flex-row w-full overflow-hidden min-h-[240px]"
+      >
+        <div className="flex-1 gap-3 flex flex-col items-start justify-center border-r px-5 py-5 shadow-inner shadow-black/10">
+         <span className="flex text-xs font-lora font-semibold italic uppercase">
+         Transactional Emails
+         </span>
+         <span className="flex flex-col font-lora text-muted-foreground text-2xl leading-tight">
+         Fast and reliable
+          <span className="text-primary">
+          email API for developers.
+          </span>
+         </span>
+          <p className="text-sm text-foreground/70">
+          Send personalized transactional emails with ease using our robust API. Ensure timely delivery and high engagement rates for your critical communications.
+          </p>
+          <Button>
+          Learn More
+          </Button>
+        </div>
+        <div className="flex-1 gap-3 flex flex-col items-start justify-center border-r px-5 py-5 shadow-inner shadow-black/10">
+         <span className="flex text-xs font-lora font-semibold italic uppercase">
+         Transactional Emails
+         </span>
+         <span className="flex flex-col font-lora text-muted-foreground text-2xl leading-tight">
+         Fast and reliable
+          <span className="text-primary">
+          email API for developers.
+          </span>
+         </span>
+          <p className="text-sm text-foreground/70">
+          Send personalized transactional emails with ease using our robust API. Ensure timely delivery and high engagement rates for your critical communications.
+          </p>
+          <Button>
+          Learn More
           </Button>
         </div>
       </section>
