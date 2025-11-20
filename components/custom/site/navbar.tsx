@@ -1,6 +1,17 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuIndicator,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
+  NavigationMenuViewport,
+} from "@/components/ui/navigation-menu"
 
 export default function SiteNavbar() {
   return (
@@ -21,24 +32,38 @@ export default function SiteNavbar() {
           <span className="text-2xl font-lora font-bold">Gitty</span>
         </Link>
         {/* Center: Nav Links (visible on md+) */}
-        <div className="hidden md:flex items-center justify-center gap-8 flex-1">
-          <a href="/features" className="text-base text-muted-foreground hover:underline">
-            Features
-          </a>
-          <a href="/pricing" className="text-base text-muted-foreground hover:underline">
-            Pricing
-          </a>
-          <a href="/about" className="text-base text-muted-foreground hover:underline">
-            About
-          </a>
-        </div>
+        <NavigationMenu>
+  <NavigationMenuList>
+    <NavigationMenuItem>
+      <NavigationMenuTrigger>FEATURES</NavigationMenuTrigger>
+      <NavigationMenuContent>
+        <NavigationMenuLink className="cursor-pointer">Link</NavigationMenuLink>
+      </NavigationMenuContent>
+    </NavigationMenuItem>
+    <NavigationMenuItem>
+          <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+            <Link href="/demo">DEMO</Link>
+          </NavigationMenuLink>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+            <Link href="/pricing">Pricing</Link>
+          </NavigationMenuLink>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+            <Link href="/manifesto">Manifesto</Link>
+          </NavigationMenuLink>
+        </NavigationMenuItem>
+  </NavigationMenuList>
+</NavigationMenu>
         {/* Right: Buttons (visible on md+) */}
         <div className="hidden md:flex items-center gap-2">
-          <Button variant="ghost" size="sm" asChild>
-            <a href="/login">Login</a>
+          <Button variant={"outline"}>
+            Login
           </Button>
-          <Button size="sm" asChild>
-            <a href="/signup">Sign Up</a>
+          <Button>
+            Sign Up
           </Button>
         </div>
         {/* Mobile: Nav Links & Login Action */}

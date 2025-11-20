@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
 export default function Home() {
@@ -18,6 +19,14 @@ export default function Home() {
           Give access to your private repositories—no need to make them public. 
           With Gitty, you control who can view your code. Share securely with collaborators, recruiters, or friends and never compromise on privacy.
         </p>
+        <div className="flex flex-row items-center justify-between gap-5">
+          <Button variant={"outline"} size={"sm"}>
+            One time Payment
+          </Button>
+          <Button size={"sm"}>
+            Get Started
+          </Button>
+        </div>
       </section>
     </div>
   );
