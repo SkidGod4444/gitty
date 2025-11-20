@@ -36,7 +36,7 @@ export default function SiteNavbar() {
               priority
             />
           </div>
-          <span className="text-2xl font-lora font-bold">Gitty</span>
+          <span className="text-2xl font-lora font-semibold italic">Gitty</span>
         </Link>
 
         {/* Center: Nav Links (desktop) */}
