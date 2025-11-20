@@ -1,9 +1,5 @@
-import React from 'react'
+import React from "react";
 
 export default function Manifesto() {
-  return (
-    <div>
-      Oops
-    </div>
-  )
+  return <div>Oops</div>;
 }

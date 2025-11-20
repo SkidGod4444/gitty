@@ -81,18 +81,18 @@ export default function SiteNavbar() {
         {/* Right: Auth buttons (desktop) */}
         <div className="hidden items-center gap-2 md:flex">
           <Button variant={"outline"} asChild>
-          <Link href="https://l.devwtf.in/gitty" target="_blank" rel="noopener noreferrer">
-          <Star aria-hidden="true"/>
-          23405
-                    </Link>
+            <Link
+              href="https://l.devwtf.in/gitty"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Star aria-hidden="true" />
+              23405
+            </Link>
           </Button>
-        <Button
-                    asChild
-                  >
-                    <Link href="/auth">
-                    Get Started
-                    </Link>
-                  </Button>
+          <Button asChild>
+            <Link href="/auth">Get Started</Link>
+          </Button>
         </div>
 
         {/* Mobile: Menu button + popover */}
@@ -117,7 +117,6 @@ export default function SiteNavbar() {
                   <Button
                     variant="ghost"
                     asChild
-                    
                     className="justify-start w-full shadow-none"
                   >
                     <Link href="/features">Features</Link>
@@ -125,7 +124,6 @@ export default function SiteNavbar() {
                   <Button
                     variant="ghost"
                     asChild
-                    
                     className="justify-start w-full shadow-none"
                   >
                     <Link href="/demo">Demo</Link>
@@ -133,7 +131,6 @@ export default function SiteNavbar() {
                   <Button
                     variant="ghost"
                     asChild
-                    
                     className="justify-start w-full shadow-none"
                   >
                     <Link href="/pricing">Pricing</Link>
@@ -147,12 +144,15 @@ export default function SiteNavbar() {
                   </Button>
                 </div>
                 <div className="mt-2 border-t pt-2 flex flex-col gap-2">
-                  <Button
-                    variant="outline"
-                    className="w-full"
-                    asChild
-                  >
-                    <Link href="/login">Login</Link>
+                  <Button variant={"outline"} asChild>
+                    <Link
+                      href="https://l.devwtf.in/gitty"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Star aria-hidden="true" />
+                      23405
+                    </Link>
                   </Button>
                   <Button className="w-full">Sign Up</Button>
                 </div>

@@ -1,9 +1,5 @@
-import React from 'react'
+import React from "react";
 
 export default function Privacy() {
-  return (
-    <div>
-      Ok
-    </div>
-  )
+  return <div>Ok</div>;
 }

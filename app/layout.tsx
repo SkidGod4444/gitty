@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { Geist } from 'next/font/google'
+import { Geist } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/custom/theme.provider";
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/next";
 
 const fontLora = localFont({
   src: [
@@ -39,16 +39,17 @@ const fontLora = localFont({
 });
 
 const fontGeist = Geist({
-  subsets: ['latin'],
-  weight: '400',
-  variable: '--font-geist',
-  display: 'swap',
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-geist",
+  display: "swap",
   preload: true,
-})
+});
 
 export const metadata: Metadata = {
   title: "Gitty - Share Private Repos, Securely & Effortlessly",
-  description: "Give access to your private repositories—no need to make them public. With Gitty, you control who can view your code. Share securely with collaborators, recruiters, or friends and never compromise on privacy.",
+  description:
+    "Give access to your private repositories—no need to make them public. With Gitty, you control who can view your code. Share securely with collaborators, recruiters, or friends and never compromise on privacy.",
 };
 
 export default function RootLayout({
@@ -59,16 +60,17 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${fontGeist.variable} ${fontLora.variable} antialiased bg-[#FAFAFA]`}>
+        className={`${fontGeist.variable} ${fontLora.variable} antialiased bg-[#FAFAFA]`}
+      >
         <ThemeProvider
-            attribute="class"
-            defaultTheme="light"
-            forcedTheme="light"
-            disableTransitionOnChange
-          >
-            {children}
-          </ThemeProvider>
-          <Analytics mode="production"/>
+          attribute="class"
+          defaultTheme="light"
+          forcedTheme="light"
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
+        <Analytics mode="production" />
       </body>
     </html>
   );
