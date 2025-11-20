@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import * as Popover from "@radix-ui/react-popover";
-import { MenuIcon } from "lucide-react";
+import { Github, MenuIcon, Star } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -16,6 +16,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import ThemeSwitcher from "../theme.switcher";
 
 export default function SiteNavbar() {
   return (
@@ -81,8 +82,19 @@ export default function SiteNavbar() {
 
         {/* Right: Auth buttons (desktop) */}
         <div className="hidden items-center gap-2 md:flex">
-          <Button variant="outline">Login</Button>
-          <Button>Sign Up</Button>
+          <Button variant={"outline"} asChild>
+          <Link href="https://l.devwtf.in/gitty" target="_blank" rel="noopener noreferrer">
+          <Star aria-hidden="true"/>
+          23405
+                    </Link>
+          </Button>
+        <Button
+                    asChild
+                  >
+                    <Link href="/auth">
+                    Get Started
+                    </Link>
+                  </Button>
         </div>
 
         {/* Mobile: Menu button + popover */}
@@ -137,8 +149,12 @@ export default function SiteNavbar() {
                   </Button>
                 </div>
                 <div className="mt-2 border-t pt-2 flex flex-col gap-2">
-                  <Button variant="outline" className="w-full">
-                    Login
+                  <Button
+                    variant="outline"
+                    className="w-full"
+                    asChild
+                  >
+                    <Link href="/login">Login</Link>
                   </Button>
                   <Button className="w-full">Sign Up</Button>
                 </div>

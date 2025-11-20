@@ -22,9 +22,11 @@ export default function SiteFooter() {
             No credit card required—get started in seconds and experience the future of code collaboration.
           </p>
         </div>
-        <Button>
-          Get Started
-        </Button>
+        <Button asChild>
+          <Link href={"/auth"}>
+            Get Started
+            </Link>
+          </Button>
       </section>
       <section
         id="footer-bottom"

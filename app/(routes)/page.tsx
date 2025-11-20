@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowBigRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -21,11 +22,15 @@ export default function Home() {
           With Gitty, you control who can view your code. Share securely with collaborators, recruiters, or friends and never compromise on privacy.
         </p>
         <div className="flex flex-row items-center justify-between gap-5">
-          <Button variant={"outline"} size={"sm"}>
+          <Button variant={"outline"} asChild>
+            <Link href={"/pricing"}>
             Custom Pricing
+            </Link>
           </Button>
-          <Button size={"sm"}>
+          <Button asChild>
+          <Link href={"/auth"}>
             Get Started
+            </Link>
           </Button>
         </div>
       </section>
