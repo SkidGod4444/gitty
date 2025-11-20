@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import { Geist } from 'next/font/google'
 import "./globals.css";
 import { ThemeProvider } from "@/components/custom/theme.provider";
+import { Analytics } from "@vercel/analytics/next"
 
 const fontLora = localFont({
   src: [
@@ -57,6 +58,7 @@ export default function RootLayout({
           >
             {children}
           </ThemeProvider>
+          <Analytics/>
       </body>
     </html>
   );

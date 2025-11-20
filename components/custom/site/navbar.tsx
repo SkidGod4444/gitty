@@ -1,19 +1,20 @@
+"use client";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import {
   NavigationMenu,
   NavigationMenuContent,
-  NavigationMenuIndicator,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-  NavigationMenuViewport,
 } from "@/components/ui/navigation-menu"
+import { useIsMobile } from "@/hooks/use.mobile";
 
 export default function SiteNavbar() {
+  const isMobile = useIsMobile();
   return (
     <nav className="sticky top-0 z-50 w-full border-b border-stone-200 backdrop-blur-lg py-2 px-4 lg:px-6">
       <div className="flex items-center h-14 w-full mx-auto max-w-7xl justify-between gap-4">
@@ -32,7 +33,7 @@ export default function SiteNavbar() {
           <span className="text-2xl font-lora font-bold">Gitty</span>
         </Link>
         {/* Center: Nav Links (visible on md+) */}
-        <NavigationMenu>
+        <NavigationMenu viewport={isMobile}>
   <NavigationMenuList>
     <NavigationMenuItem>
       <NavigationMenuTrigger>FEATURES</NavigationMenuTrigger>

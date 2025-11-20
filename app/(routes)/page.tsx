@@ -21,7 +21,7 @@ export default function Home() {
         </p>
         <div className="flex flex-row items-center justify-between gap-5">
           <Button variant={"outline"} size={"sm"}>
-            One time Payment
+            Custom Pricing
           </Button>
           <Button size={"sm"}>
             Get Started
