@@ -9,31 +9,6 @@ export default function SiteFooter() {
       className="flex flex-col w-full border-t text-center mt-auto"
     >
       <section
-        id="footer-top"
-        className="flex flex-col border-b md:flex-row items-center justify-center bg-white p-5 gap-6"
-      >
-        <Image
-          src={"/assets/icons/mascot001.png"}
-          width={120}
-          height={120}
-          loading="lazy"
-          alt="gitty-mascot"
-        />
-        <div className="flex md:items-start flex-col">
-          <span className="text-2xl font-lora">
-            Ready to Share Your Code? Start Free Today!
-          </span>
-          <p className="font-sans mt-2 text-muted-foreground font-normal text-center md:text-start whitespace-normal leading-tight">
-            Join thousands of developers who trust Gitty to showcase their work
-            safely. No credit card required—get started in seconds and
-            experience the future of code collaboration.
-          </p>
-        </div>
-        <Button asChild>
-          <Link href={"/auth"}>Get Started</Link>
-        </Button>
-      </section>
-      <section
         id="footer-bottom"
         className="flex flex-col md:flex-row items-center justify-between gap-6 p-5"
       >
